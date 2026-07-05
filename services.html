@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>服務目錄 + 悶工診斷 — 自動波 AutoBo</title>
+<meta name="description" content="自動波 8 大工作流模板：客戶查詢自動覆、報價單生成、社群排程、對數記帳、會議摘要、中英葡翻譯、客戶跟進、月度報告。填 5 分鐘悶工診斷，我哋免費幫你評估邊樣啱做。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://autobo-ai.vercel.app/services.html">
+<link rel="llms-txt" href="/llms.txt">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700;800&family=Noto+Sans+TC:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .tpl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:26px}
+  .tpl{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+  .tpl.flag{border-color:var(--accent)}
+  .tpl .no{font-family:var(--mono);font-size:.72rem;color:var(--muted-2);letter-spacing:.08em}
+  .tpl h3{font-size:1.05rem;display:flex;align-items:center;gap:8px}
+  .tpl .star{color:var(--accent);font-size:.85em}
+  .tpl .pain{font-size:.83rem;color:var(--muted)}
+  .tpl .how{font-size:.9rem;color:var(--ink);opacity:.92;margin:2px 0}
+  .tpl .tier{margin-top:auto;padding-top:10px;border-top:1px solid var(--line);font-family:var(--mono);font-size:.72rem;color:var(--muted-2)}
+  .tag-diff{background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:2px 10px;font-family:var(--mono);font-size:.66rem}
+
+  #diagnostic{padding:56px 0 80px}
+  .diag-shell{display:grid;grid-template-columns:1fr;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  @media(min-width:820px){.diag-shell{grid-template-columns:.9fr 1.1fr}}
+  .diag-side{padding:32px;background:var(--panel-2);border-bottom:1px solid var(--line)}
+  @media(min-width:820px){.diag-side{border-bottom:none;border-right:1px solid var(--line)}}
+  .diag-side h2{font-size:1.35rem;margin-bottom:10px}
+  .diag-side p{color:var(--muted);font-size:.92rem}
+  .diag-form{padding:32px}
+  .diag-form label{display:block;font-size:.85rem;color:var(--muted);margin:16px 0 6px}
+  .diag-form label:first-child{margin-top:0}
+  .diag-form input[type=text],.diag-form input[type=email],.diag-form textarea{
+    width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;color:var(--ink);
+    padding:10px 12px;font-family:var(--body);font-size:.95rem;
+  }
+  .diag-form textarea{min-height:88px;resize:vertical}
+  .pain-list{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+  .pain-item{display:flex;align-items:center;gap:10px;font-size:.9rem;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 12px}
+  .pain-item input{accent-color:var(--accent)}
+  .diag-submit{margin-top:22px}
+  .diag-note{font-size:.78rem;color:var(--muted-2);margin-top:14px}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <svg class="dial" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M12 6v3M17.5 8.5l-2 2M6.5 8.5l2 2" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round"/></svg>
+      自動波 AutoBo
+    </a>
+    <div class="links">
+      <a href="/">首頁</a>
+      <a href="#diagnostic">悶工診斷</a>
+    </div>
+    <a class="cta-btn" href="#diagnostic">免費診斷</a>
+  </div>
+</nav>
+
+<header class="hero wrap" style="padding-bottom:10px">
+  <span class="eyebrow tag rv">服務目錄</span>
+  <h1 class="rv" style="font-size:clamp(1.7rem,4.2vw,2.4rem)">8 個現成工作流模板</h1>
+  <p class="lede rv" style="margin-bottom:6px">由客戶查詢自動覆到中英葡翻譯——揀你最想擺脫嗰樣悶工，我哋人手同你砌到 work 為止。</p>
+</header>
+
+<section class="wrap tight">
+  <div class="tpl-grid rv">
+
+    <div class="tpl flag">
+      <span class="no">01 · 痛點①</span>
+      <h3><span class="star">⭐</span> 客戶查詢自動覆</h3>
+      <p class="pain">客人喺 WhatsApp/FB/IG 重複問價錢、營業時間、有冇貨，老闆日覆夜覆。</p>
+      <p class="how">AI 對照你嘅商戶知識庫即刻覆；唔肯定嘅（議價/投訴）自動轉人手 + 通知你，唔會靠估亂答。</p>
+      <div class="tier">落地服務費 + 使費封頂，Runtime 行你自己戶口</div>
+    </div>
+
+    <div class="tpl">
+      <span class="no">02 · 痛點②</span>
+      <h3>報價單/發票自動生成</h3>
+      <p class="pain">客人一問就要張正式報價單，開 Word 改模板改到厭。</p>
+      <p class="how">口述/文字輸入需求，對照你嘅價目表逐項生成 PDF；價錢一律查表，AI 唔准估價。</p>
+      <div class="tier">落地服務費，價目表結構化共建</div>
+    </div>
+
+    <div class="tpl">
+      <span class="no">03 · 痛點④⑤</span>
+      <h3>社群內容生成 + 排程</h3>
+      <p class="pain">貼文要日日諗日日寫，一忙就斷更。</p>
+      <p class="how">每週自動生成貼文草稿批次，你 10 分鐘 approve/改，按最佳時段自動排程發佈。</p>
+      <div class="tier">落地服務費 + 月費（Meta token 維護）</div>
+    </div>
+
+    <div class="tpl">
+      <span class="no">04 · 痛點⑥</span>
+      <h3>單據入表 / 對數</h3>
+      <p class="pain">收據/入貨單人手打入 Excel，月尾對數對到眼花。</p>
+      <p class="how">單據影相自動識別入表；低置信度欄位標黃俾你人手核，唔會靜默估錯數。</p>
+      <div class="tier">落地服務費，按單據張數計月費</div>
+    </div>
+
+    <div class="tpl">
+      <span class="no">05 · 痛點⑦</span>
+      <h3>會議 / 通話記錄摘要</h3>
+      <p class="pain">開完會、傾完電話要人手寫記錄同跟進項。</p>
+      <p class="how">錄音自動轉文字出摘要 + 行動清單 + 邊個負責；私隱敏感行業可全本地處理，唔上雲。</p>
+      <div class="tier">落地服務費，按錄音鐘數計</div>
+    </div>
+
+    <div class="tpl">
+      <span class="no">06 · 痛點⑨</span>
+      <h3>中英葡三語翻譯管線 <span class="tag-diff">澳門差異化</span></h3>
+      <p class="pain">澳門文件動輒要中英葡三版，外判貴又慢。</p>
+      <p class="how">文件掟入即批量出三語版 + 質檢報告，術語鎖定客戶簽認版；建議終審仍由人手把關。</p>
+      <div class="tier">落地服務費，按字數計</div>
+    </div>
+
+    <div class="tpl">
+      <span class="no">07 · 痛點⑩</span>
+      <h3>客戶名單整理 + 跟進提醒</h3>
+      <p class="pain">客戶資料散喺 WhatsApp+名片+Excel，邊個幾耐冇跟進全靠個腦記。</p>
+      <p class="how">名單清洗去重分層，每朝出「今日應跟邊個」清單；資料全程喺你自己戶口處理。</p>
+      <div class="tier">落地服務費 + 名單健康自查</div>
+    </div>
+
+    <div class="tpl">
+      <span class="no">08 · 痛點⑥⑦</span>
+      <h3>月度業績報告自動生成</h3>
+      <p class="pain">月尾夾埋一堆數砌報告，做一次半日。</p>
+      <p class="how">每月自動抽數生成報告草稿，圖表+摘要，你過目後出 PDF；數字一律源數據直計，AI 只寫敘述。</p>
+      <div class="tier">落地服務費，每月跑一次</div>
+    </div>
+
+  </div>
+  <p style="color:var(--muted-2);font-size:.82rem;margin-top:26px">以上為模板方向參考，實際交付按你嘅公司情況度身調整；定價待首單實測後補回具體金額。</p>
+</section>
+
+<section id="diagnostic" class="wrap">
+  <div class="dial-divider rv"><span>5 分鐘悶工診斷</span></div>
+  <div class="diag-shell rv">
+    <div class="diag-side">
+      <h2>邊樣悶工你最想擺脫？</h2>
+      <p>唔使諗太耐，第一時間有咩就寫咩。冇技術嘢要識，淨係講返你日常做緊乜。填完我哋會揀最有把握嗰項，免費幫你評估邊樣啱交畀 AI 做。</p>
+      <p style="margin-top:18px">如果想直接傾，都可以：</p>
+      <p><a href="mailto:inariglobal@gmail.com?subject=自動波%20免費診斷" style="color:var(--accent);font-weight:600;text-decoration:none">✉️ inariglobal@gmail.com</a></p>
+    </div>
+    <form class="diag-form" id="diagForm">
+      <label for="company">你間公司主要做咩生意？</label>
+      <input type="text" id="company" name="company" placeholder="例：茶餐廳 / 診所 / 貿易批發">
+
+      <label>邊啲悶工你日日都要做？（可揀多項）</label>
+      <div class="pain-list">
+        <label class="pain-item"><input type="checkbox" name="pain" value="重複回覆客戶查詢"> 重複回覆客戶查詢</label>
+        <label class="pain-item"><input type="checkbox" name="pain" value="出報價單/發票"> 出報價單 / 發票</label>
+        <label class="pain-item"><input type="checkbox" name="pain" value="跟進訂單/追數"> 跟進訂單 / 預約 / 追收數</label>
+        <label class="pain-item"><input type="checkbox" name="pain" value="寫社群貼文"> 寫社群貼文 / 宣傳內容</label>
+        <label class="pain-item"><input type="checkbox" name="pain" value="打數對數記帳"> 打數入 Excel / 對數 / 記帳</label>
+        <label class="pain-item"><input type="checkbox" name="pain" value="會議記錄摘要"> 會後寫記錄、摘要</label>
+        <label class="pain-item"><input type="checkbox" name="pain" value="翻譯"> 翻譯（中/英/葡）</label>
+        <label class="pain-item"><input type="checkbox" name="pain" value="客戶名單跟進"> 更新客戶名單 / 跟進紀錄</label>
+      </div>
+
+      <label for="notes">仲有咩悶工想講？</label>
+      <textarea id="notes" name="notes" placeholder="隨便講，唔使組織文字"></textarea>
+
+      <label for="contact">你嘅聯絡方式（電話 / WhatsApp / email）</label>
+      <input type="text" id="contact" name="contact" placeholder="方便我哋約時間傾一傾">
+
+      <div class="diag-submit">
+        <button type="submit" class="cta-btn" style="border:none;cursor:pointer;font-size:.95rem;padding:11px 26px">送出診斷</button>
+      </div>
+      <p class="diag-note">送出會經你嘅郵件程式發送——我哋唔會自動收集你嘅資料，回覆前你可以先睇一睇內容。</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">
+      <svg class="dial" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/></svg>
+      自動波 · powered by CloudPipe
+    </div>
+    <div class="flinks">
+      <a href="/">首頁</a>
+      <a href="https://cloudpipe-landing.vercel.app">CloudPipe AI</a>
+      <a href="mailto:inariglobal@gmail.com">聯絡我哋</a>
+    </div>
+    <p>© 2026 自動波 AutoBo · CC BY 4.0</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
+if(typeof gsap !== 'undefined' && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+  gsap.utils.toArray('.tpl').forEach(function(el,i){
+    gsap.from(el,{opacity:0,y:16,duration:.5,delay:(i%4)*.06,ease:'power2.out'});
+  });
+}
+
+/* TODO(Kira): 換返 Tally embed（開咗戶口之後）。而家用 mailto 保證零虛構第三方整合、即刻可用。 */
+document.getElementById('diagForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var company = document.getElementById('company').value || '（未填）';
+  var contact = document.getElementById('contact').value || '（未填）';
+  var notes = document.getElementById('notes').value || '（未填）';
+  var pains = Array.from(document.querySelectorAll('input[name="pain"]:checked')).map(function(c){return c.value}).join('、') || '（未揀）';
+  var body = '公司/生意：'+company+'\n悶工：'+pains+'\n其他悶工：'+notes+'\n聯絡方式：'+contact;
+  var mailto = 'mailto:inariglobal@gmail.com?subject='+encodeURIComponent('自動波 悶工診斷 — '+company)+'&body='+encodeURIComponent(body);
+  window.location.href = mailto;
+});
+</script>
+</body>
+</html>

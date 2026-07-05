@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自動波 AutoBo — 你盤生意，轉自動波 | AI 工作流自動化 · 澳門</title>
+
+<!-- AEO: Meta Tags -->
+<meta name="description" content="自動波（AutoBo）由 CloudPipe 團隊打造，為澳門中小企提供 AI 工作流自動化 concierge 服務——客戶查詢自動覆、報價單生成、社群排程、對數記帳、中英葡翻譯等。人手落地，買家自帶 API key，唔肯定就轉人手，唔靠估。">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://autobo-ai.vercel.app/">
+<link rel="llms-txt" href="/llms.txt">
+
+<!-- AEO: Open Graph -->
+<meta property="og:title" content="自動波 AutoBo — 你盤生意，轉自動波">
+<meta property="og:description" content="澳門中小企 AI 工作流自動化 concierge 服務。由 CloudPipe 團隊打造，人手落地，唔肯定就轉人手，唔靠 AI 亂噏。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autobo-ai.vercel.app/">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="自動波 AutoBo">
+
+<!-- AEO: Schema.org Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization","Service"],
+  "name": "自動波 AutoBo",
+  "alternateName": "AutoBo",
+  "url": "https://autobo-ai.vercel.app",
+  "description": "自動波（AutoBo）為澳門中小企提供 AI 工作流自動化 concierge 服務：人手同你砌到 work 為止，行喺你自己戶口上，成本你自己睇晒。",
+  "slogan": "你盤生意，轉自動波",
+  "areaServed": {"@type":"AdministrativeArea","name":"澳門"},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "CloudPipe AI Knowledge Graph",
+    "url": "https://cloudpipe-landing.vercel.app"
+  },
+  "memberOf": {
+    "@type": "Organization",
+    "name": "CloudPipe AI",
+    "url": "https://cloudpipe-landing.vercel.app"
+  }
+}
+</script>
+
+<!-- AEO: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"自動波係做乜嘢？","acceptedAnswer":{"@type":"Answer","text":"自動波幫澳門中小企將重複嘅悶工（客戶查詢、報價單、社群貼文、對數記帳、翻譯等）交畀 AI 自動處理，人手落地確保啱用先交貨。"}},
+    {"@type":"Question","name":"我唔識技術可唔可以用？","acceptedAnswer":{"@type":"Answer","text":"可以。自動波係 concierge 落地服務，由開戶、配置到教學全程人手陪住你，你唔需要識任何技術。"}},
+    {"@type":"Question","name":"AI 會唔會亂答客人？","acceptedAnswer":{"@type":"Answer","text":"唔會。自動波嘅工作流一律設「唔肯定就轉人手」機制，AI 唔會靠估亂答，超出範圍嘅查詢會即刻轉返俾你處理。"}},
+    {"@type":"Question","name":"使費點計？會唔會爆數？","acceptedAnswer":{"@type":"Answer","text":"運行成本喺你自己戶口，透明可查，自動波會幫你設定使費上限，唔會不知不覺爆數。"}},
+    {"@type":"Question","name":"點樣開始？","acceptedAnswer":{"@type":"Answer","text":"填一份 5 分鐘嘅悶工診斷清單，圈返你最想擺脫嘅悶工，我哋會揀最有把握嗰一項免費幫你評估。"}}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700;800&family=Noto+Sans+TC:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <svg class="dial" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M12 6v3M17.5 8.5l-2 2M6.5 8.5l2 2" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round"/></svg>
+      自動波 AutoBo
+    </a>
+    <div class="links">
+      <a href="/services.html">服務目錄</a>
+      <a href="/services.html#diagnostic">悶工診斷</a>
+    </div>
+    <a class="cta-btn" href="/services.html#diagnostic">免費診斷</a>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <span class="eyebrow tag rv">自動波 · powered by CloudPipe</span>
+  <h1 class="rv">你盤生意，轉自動波</h1>
+  <p class="lede rv">架車揸手波，乜都自己踩；轉自動波，車自己走。我哋幫澳門中小企將日日重複嘅悶工交畀 AI 自動處理——人手同你砌到 work 為止，行喺你自己戶口，成本你自己睇晒。</p>
+  <div class="ctas rv">
+    <a class="cta-btn" href="/services.html#diagnostic">5 分鐘悶工診斷</a>
+    <a class="cta-ghost" href="/services.html">睇服務目錄</a>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="dial-divider rv"><span>P — R — N — D</span></div>
+  <div class="grid cols-4 rv">
+    <div class="stat"><div class="num">8</div><div class="label">現成工作流模板</div></div>
+    <div class="stat"><div class="num">3</div><div class="label">語言：中 / 英 / 葡</div></div>
+    <div class="stat"><div class="num">0%</div><div class="label">AI 靠估亂答——唔肯定就轉人手</div></div>
+    <div class="stat"><div class="num">100%</div><div class="label">成本行喺你自己戶口，透明可查</div></div>
+  </div>
+</section>
+
+<section class="wrap" id="gearbox">
+  <span class="eyebrow rv">點樣運作</span>
+  <h2 class="rv" style="font-size:1.7rem;margin:.3em 0 .2em">三檔就搞掂</h2>
+  <p class="rv" style="color:var(--muted);max-width:34em;margin:0 0 30px">唔使你識任何技術。跟住三檔走，逐步將悶工交畀 AI。</p>
+
+  <div class="ladder rv" id="ladder">
+    <div class="rail"><div class="fill" id="railFill"></div></div>
+
+    <div class="gtier">
+      <div class="ggear" data-g="1">D1</div>
+      <div class="gcard">
+        <div class="ghead"><h3>講出你嘅悶工</h3><span class="gpill">5 分鐘</span></div>
+        <p>填一份悶工診斷清單，圈返你最想擺脫嘅重複工作——唔使諗太耐，第一時間有咩就寫咩。</p>
+      </div>
+    </div>
+
+    <div class="gtier">
+      <div class="ggear" data-g="2">D2</div>
+      <div class="gcard">
+        <div class="ghead"><h3>人手同你砌到 work</h3><span class="gpill">1-4 週</span></div>
+        <p>我哋揀最啱嘅模板，用你真實嘅資料試到準先交貨——唔係俾個 app 你自己摸，係陪住你砌到啱用。</p>
+      </div>
+    </div>
+
+    <div class="gtier">
+      <div class="ggear" data-g="3">D3</div>
+      <div class="gcard">
+        <div class="ghead"><h3>自動走，你自己睇</h3><span class="gpill">持續運行</span></div>
+        <p>工作流行喺你自己戶口，使費透明有上限；AI 唔肯定嘅位自動轉返俾你，唔會靠估亂答。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap tight">
+  <div class="dial-divider rv"><span>為乜揀自動波</span></div>
+  <div class="grid cols-2 rv">
+    <div class="card">
+      <h3>唔賣你 app，賣你結果</h3>
+      <p>坊間工具要你自己識用；自動波係人落地服務——由開戶、配置到教學，全程陪住你，直至工作流真係喺你間舖度行得通。</p>
+    </div>
+    <div class="card">
+      <h3>唔靠估，唔亂噏</h3>
+      <p>每個工作流都設「唔肯定就轉人手」——超出範圍嘅查詢、對唔上嘅數，一律標俾你人手核，唔會靜默俾個錯答案。</p>
+    </div>
+    <div class="card">
+      <h3>成本你自己話事</h3>
+      <p>Runtime 行喺你自己嘅 AI 服務戶口，唔經我哋中央系統代收——你睇到晒使費，我哋幫你設封頂。</p>
+    </div>
+    <div class="card">
+      <h3>澳門在地，中英葡皆通</h3>
+      <p>由中英葡三語文件處理到本地行業術語，自動波係為澳門中小企度身設計，唔係通用外國工具直接搬字過紙。</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap tight">
+  <div class="card rv" style="text-align:center;padding:44px 24px">
+    <h2 style="font-size:1.5rem;margin-bottom:10px">想睇下你間舖邊樣悶工可以自動走？</h2>
+    <p style="color:var(--muted);margin-bottom:22px">5 分鐘診斷清單，唔使識技術，我哋揀最有把握嗰項免費幫你評估。</p>
+    <a class="cta-btn" href="/services.html#diagnostic" style="padding:12px 28px;font-size:1rem">開始診斷</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">
+      <svg class="dial" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/></svg>
+      自動波 · powered by CloudPipe
+    </div>
+    <div class="flinks">
+      <a href="/services.html">服務目錄</a>
+      <a href="/services.html#diagnostic">悶工診斷</a>
+      <a href="https://cloudpipe-landing.vercel.app">CloudPipe AI</a>
+      <a href="mailto:inariglobal@gmail.com">聯絡我哋</a>
+    </div>
+    <p>© 2026 自動波 AutoBo · CC BY 4.0</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
+
+  if(reduce || typeof gsap === 'undefined'){ return; }
+  gsap.registerPlugin(ScrollTrigger);
+
+  // page-load fade for hero only (orchestrated entrance)
+  gsap.from('.hero .rv', {opacity:0, y:18, duration:.7, stagger:.08, ease:'power2.out'});
+
+  // scroll-linked gear ladder: rail fills + gears light up as user scrolls the ladder
+  var gears = gsap.utils.toArray('.ggear');
+  ScrollTrigger.create({
+    trigger: '#ladder',
+    start: 'top 70%',
+    end: 'bottom 60%',
+    scrub: .6,
+    onUpdate: function(self){
+      var p = self.progress;
+      document.getElementById('railFill').style.height = (p*100)+'%';
+      var step = Math.min(gears.length-1, Math.floor(p*gears.length));
+      gears.forEach(function(g,i){ g.classList.toggle('active', i<=step); });
+    }
+  });
+
+  gsap.utils.toArray('.grid .card, .grid .stat').forEach(function(el,i){
+    gsap.from(el, {
+      opacity:0, y:16, duration:.5, delay:(i%4)*.05, ease:'power2.out',
+      scrollTrigger:{trigger:el, start:'top 88%'}
+    });
+  });
+})();
+</script>
+</body>
+</html>

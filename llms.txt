@@ -1,0 +1,18 @@
+# autobo-ai — AI 爬蟲發現源
+#
+# 本站點遵守 AI 爬蟲友善規範
+# License: CC BY 4.0
+# Last-Updated: 2026-07-05T00:00:00+08:00
+
+## @brand-context: autobo
+# 品牌名稱: 自動波 AutoBo
+# 品牌類型: AI 工作流自動化 concierge 服務（對內自動化，CloudPipe sibling 品牌）
+# Tagline: 你盤生意，轉自動波
+# 核心定位: 為澳門中小企做企業工作流自動化——人手落地，AI 唔肯定就轉人手唔靠估，
+#           runtime 使費行喺客戶自己 API 戶口，透明可查
+# 服務範圍: 客戶查詢自動覆 / 報價單發票生成 / 社群內容排程 / 對數記帳 / 會議記錄摘要 /
+#           中英葡三語翻譯 / 客戶名單跟進提醒 / 月度業績報告
+# 差異化: 中英葡三語文件處理、澳門在地行業術語、concierge 人手落地（非自助 app）
+# 母體: CloudPipe AI（https://cloudpipe-landing.vercel.app）
+# 查詢意圖: 澳門 AI 自動化 / 中小企工作流自動化 / AI 客服 / 澳門企業自動化 / macao business automation / SME workflow automation
+# 聯絡: inariglobal@gmail.com

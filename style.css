@@ -1,0 +1,152 @@
+/* 自動波 AutoBo — 共用樣式
+   設計語言：工作坊儀表板 — 波檔（P-R-N-D）作克制嘅機械意象，
+   唔做全頁 skeuomorphic，齒輪只喺 hero/footer 出現。
+*/
+:root{
+  --bg:#1A1B1E; --panel:#232427; --panel-2:#292A2E;
+  --ink:#EDEEEA; --muted:#9B9C9C; --muted-2:#6E6F72;
+  --accent:#D68A3C; --accent-ink:#2A1B0C; --accent-soft:rgba(214,138,60,.14);
+  --line:#35363A; --go:#5FA776; --rail:#3D3E42;
+  --display:"M PLUS 1p",-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+  --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --mono:"IBM Plex Mono","SF Mono",ui-monospace,Menlo,monospace;
+  --maxw:1080px;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#F6F4EF; --panel:#FFFFFF; --panel-2:#FBF9F5;
+    --ink:#201F1C; --muted:#65635D; --muted-2:#8C8A83;
+    --accent:#B8681E; --accent-ink:#FFF8EF; --accent-soft:rgba(184,104,30,.10);
+    --line:#E4E0D5; --go:#3F8A5E; --rail:#D9D4C6;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1A1B1E; --panel:#232427; --panel-2:#292A2E;
+  --ink:#EDEEEA; --muted:#9B9C9C; --muted-2:#6E6F72;
+  --accent:#D68A3C; --accent-ink:#2A1B0C; --accent-soft:rgba(214,138,60,.14);
+  --line:#35363A; --go:#5FA776; --rail:#3D3E42;
+}
+:root[data-theme="light"]{
+  --bg:#F6F4EF; --panel:#FFFFFF; --panel-2:#FBF9F5;
+  --ink:#201F1C; --muted:#65635D; --muted-2:#8C8A83;
+  --accent:#B8681E; --accent-ink:#FFF8EF; --accent-soft:rgba(184,104,30,.10);
+  --line:#E4E0D5; --go:#3F8A5E; --rail:#D9D4C6;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--body); line-height:1.8; -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+h1,h2,h3{font-family:var(--display);text-wrap:balance;letter-spacing:.01em;margin:0}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);
+}
+
+/* nav */
+nav.top{
+  position:sticky;top:0;z-index:40;backdrop-filter:blur(10px);
+  background:color-mix(in srgb, var(--bg) 82%, transparent);
+  border-bottom:1px solid var(--line);
+}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--ink)}
+.brand .dial{width:22px;height:22px;flex:none}
+nav.top .links{display:flex;gap:26px;font-size:.9rem}
+nav.top .links a{text-decoration:none;color:var(--muted)}
+nav.top .links a:hover{color:var(--ink)}
+.cta-btn{
+  font-family:var(--body);font-weight:600;font-size:.88rem;
+  background:var(--accent);color:var(--accent-ink);border:none;border-radius:7px;
+  padding:9px 18px;text-decoration:none;display:inline-block;transition:filter .2s;
+}
+.cta-btn:hover{filter:brightness(1.08)}
+.cta-ghost{
+  font-family:var(--body);font-weight:600;font-size:.88rem;
+  background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:7px;
+  padding:9px 18px;text-decoration:none;display:inline-block;
+}
+
+/* hero */
+.hero{padding:76px 0 40px;position:relative}
+.hero .tag{color:var(--accent)}
+.hero h1{font-size:clamp(2rem,5.4vw,3.3rem);line-height:1.28;margin:.4em 0 .3em}
+.hero p.lede{font-size:1.08rem;color:var(--muted);max-width:36em;margin:0 0 30px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+
+/* dial-divider: subtle gear-shift motif, used once */
+.dial-divider{display:flex;align-items:center;gap:14px;margin:56px 0 44px;color:var(--muted-2)}
+.dial-divider::before,.dial-divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.dial-divider span{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+
+/* gear ladder (shared component) */
+.ladder{position:relative;display:flex;flex-direction:column;gap:22px;margin-top:8px}
+.ladder .rail{
+  position:absolute;left:27px;top:10px;bottom:10px;width:4px;background:var(--rail);
+  border-radius:2px;overflow:hidden;
+}
+.ladder .rail .fill{
+  position:absolute;left:0;top:0;width:100%;height:0%;background:var(--accent);
+  transition:height .1s linear;
+}
+.gtier{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start;position:relative}
+.ggear{
+  position:relative;z-index:1;width:56px;height:56px;border-radius:50%;
+  background:var(--panel);border:2px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-weight:700;font-size:1.1rem;color:var(--muted);
+  box-shadow:0 0 0 6px var(--bg);transition:border-color .3s,color .3s;
+}
+.ggear.active{border-color:var(--accent);color:var(--accent)}
+.gcard{
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 24px;
+}
+.gcard .ghead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;margin-bottom:6px}
+.gcard h3{font-size:1.05rem}
+.gpill{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;
+  background:var(--panel-2);border:1px solid var(--line);border-radius:999px;padding:2px 11px;color:var(--muted);
+}
+.gpill.now{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);font-weight:700}
+.gcard p{margin:.4em 0 0;font-size:.94rem;color:var(--muted)}
+
+section{padding:56px 0}
+section.tight{padding:36px 0}
+.grid{display:grid;gap:20px}
+.grid.cols-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.stat{
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px;
+}
+.stat .num{font-family:var(--mono);font-size:1.7rem;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+.stat .label{font-size:.84rem;color:var(--muted);margin-top:4px}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card h3{font-size:1.05rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.94rem;margin:0}
+
+footer{border-top:1px solid var(--line);padding:44px 0 30px;margin-top:40px}
+footer .fbrand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700}
+footer .fbrand .dial{width:18px;height:18px}
+footer p{color:var(--muted-2);font-size:.82rem;margin:10px 0 0}
+footer .flinks{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:.82rem}
+footer .flinks a{color:var(--muted);text-decoration:none}
+footer .flinks a:hover{color:var(--ink)}
+
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:640px){
+  nav.top .links{display:none}
+  .gtier{grid-template-columns:40px 1fr}
+  .ggear{width:40px;height:40px;font-size:.85rem}
+  .ladder .rail{left:19px}
+}
