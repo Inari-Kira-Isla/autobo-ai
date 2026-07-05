@@ -141,7 +141,9 @@ footer .flinks{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:.8
 footer .flinks a{color:var(--muted);text-decoration:none}
 footer .flinks a:hover{color:var(--ink)}
 
-.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+/* GSAP owns the tween via inline styles when present; CSS transition removed
+   to avoid fighting GSAP's RAF-driven interpolation (caused stuck-invisible bug). */
+.rv{opacity:0;transform:translateY(16px)}
 .rv.in{opacity:1;transform:none}
 
 @media (max-width:640px){
