@@ -9,6 +9,54 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://autobo-ai.vercel.app/services.html">
 <link rel="llms-txt" href="/llms.txt">
+
+<!-- AEO: Open Graph -->
+<meta property="og:title" content="服務目錄 + 悶工診斷 — 自動波 AutoBo">
+<meta property="og:description" content="自動波 8 大 AI 工作流自動化模板：客戶查詢自動覆、報價單生成、社群排程、對數記帳、會議摘要、中英葡翻譯、客戶跟進、月度報告。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autobo-ai.vercel.app/services.html">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="自動波 AutoBo">
+
+<!-- AEO: Schema.org Service + OfferCatalog -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://autobo-ai.vercel.app/#org",
+  "name": "自動波 AutoBo",
+  "url": "https://autobo-ai.vercel.app",
+  "description": "為澳門中小企提供 AI 工作流自動化 concierge 服務——人手落地，AI 唔肯定就轉人手。",
+  "areaServed": {"@type":"AdministrativeArea","name":"澳門"},
+  "availableLanguage": ["zh-Hant","en","pt"],
+  "memberOf": {"@type":"Organization","name":"CloudPipe AI","url":"https://cloudpipe-landing.vercel.app"},
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "8 大工作流模板",
+    "itemListElement": [
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"客戶查詢自動覆","description":"AI 對照商戶知識庫即刻覆常見查詢，唔肯定自動轉人手，唔靠估亂答。"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"報價單／發票自動生成","description":"對照價目表逐項生成報價單／發票 PDF，價錢一律查表，AI 唔准估價。"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"社群內容生成 + 排程","description":"每週自動生成貼文草稿，approve 後按最佳時段自動排程發佈。"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"單據入表／對數","description":"單據影相自動識別入表，低置信度欄位標黃俾人手核，唔靜默估錯數。"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"會議／通話記錄摘要","description":"錄音自動轉文字出摘要 + 行動清單，私隱敏感行業可全本地處理。"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"中英葡三語翻譯管線","description":"文件批量出中英葡三語版 + 質檢報告，術語鎖定客戶簽認版，終審人手把關。"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"客戶名單整理 + 跟進提醒","description":"名單清洗去重分層，每朝出應跟進清單，資料喺客戶自己戶口處理。"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"月度業績報告自動生成","description":"每月自動抽數生成報告草稿，圖表 + 摘要，數字源數據直計。"}}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"首頁","item":"https://autobo-ai.vercel.app/"},
+    {"@type":"ListItem","position":2,"name":"服務目錄","item":"https://autobo-ai.vercel.app/services.html"}
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700;800&family=Noto+Sans+TC:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -194,6 +242,73 @@
   </div>
 </footer>
 
+<!-- concierge chat widget (Messenger-style; identical bundle to index.html; auto-open self-gates to home+desktop, so this inner page shows launcher-only) -->
+<button class="cc-launch" id="ccLaunch" aria-label="同自動波傾偈" hidden>
+  <span class="cc-dot"></span>
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M12 6v3M17.5 8.5l-2 2M6.5 8.5l2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+</button>
+<aside class="cc-panel" id="ccPanel" role="dialog" aria-label="自動波 concierge" hidden>
+  <div class="cc-head">
+    <span class="cc-ava"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M12 6v3M17.5 8.5l-2 2M6.5 8.5l2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+    <div class="cc-id">
+      <div class="cc-name">自動波</div>
+      <div class="cc-status">通常幾分鐘內回覆</div>
+    </div>
+    <button class="cc-x" id="ccClose" aria-label="收埋">✕</button>
+  </div>
+  <div class="cc-body" id="ccBody">
+    <div class="cc-msg cc-bot">Hi，我係自動波 👋 想擺脫邊樣悶工？揀一個，我話你知點自動走。</div>
+  </div>
+  <div class="cc-chips" id="ccChips">
+    <button class="cc-chip" type="button" data-topic="enquiry">客戶查詢自動覆</button>
+    <button class="cc-chip" type="button" data-topic="quote">報價單生成</button>
+    <button class="cc-chip" type="button" data-topic="books">對數記帳</button>
+    <button class="cc-chip" type="button" data-topic="social">社群排程</button>
+  </div>
+  <div class="cc-foot">
+    <a class="cta-btn" href="/services.html#diagnostic">5 分鐘悶工診斷</a>
+  </div>
+</aside>
+<script>
+(function(){
+  var launch=document.getElementById('ccLaunch'),
+      panel=document.getElementById('ccPanel'),
+      closeBtn=document.getElementById('ccClose'),
+      body=document.getElementById('ccBody'),
+      chips=document.getElementById('ccChips');
+  if(!launch||!panel||!body||!chips) return;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var replies={
+    enquiry:'客戶查詢自動覆 👍 常見問題 AI 即刻答；超出範圍或者唔肯定嘅，會即刻轉返俾你人手——唔會靠估亂噏。',
+    quote:'報價單生成 ✅ 客戶講完需求，AI 幫你草擬報價單，你過目改一改就發得——慳返打字同計數。',
+    books:'對數記帳 🧾 收支自動歸類對數，對唔上嘅數會標返出嚟等你核，唔會靜默過數。',
+    social:'社群排程 📅 一次過排好成星期嘅貼文，中英葡三語都得，到時自動出。'
+  };
+  function open(focusIn){panel.hidden=false;launch.hidden=true;if(focusIn){try{closeBtn.focus();}catch(e){}}}
+  function shut(){var inside=panel.contains(document.activeElement);panel.hidden=true;launch.hidden=false;if(inside){try{launch.focus();}catch(e){}}}
+  function add(cls,txt){var m=document.createElement('div');m.className='cc-msg '+cls;m.textContent=txt;body.appendChild(m);body.scrollTop=body.scrollHeight;}
+  launch.addEventListener('click',function(){open(true);});
+  closeBtn.addEventListener('click',shut);
+  document.addEventListener('keydown',function(e){if((e.key==='Escape'||e.key==='Esc')&&!panel.hidden){shut();}});
+  var seen={};
+  chips.addEventListener('click',function(e){
+    var b=e.target.closest('.cc-chip'); if(!b) return;
+    if(seen[b.dataset.topic]) return; // one answer per topic — bounds #ccBody growth
+    seen[b.dataset.topic]=1;
+    add('cc-user', b.textContent);
+    add('cc-bot', replies[b.dataset.topic] || '呢類悶工自動波都做得，我哋落地砌到啱用先交貨。');
+    add('cc-bot','想睇你間舖啱唔啱？撳下面免費診斷 👇');
+  });
+  launch.hidden=false; // reveal only after JS wires up (progressive enhancement)
+  try{
+    var home=/^\/(index\.html)?$/.test(location.pathname);
+    if(home && innerWidth>=768 && !sessionStorage.getItem('cc_seen')){
+      sessionStorage.setItem('cc_seen','1');
+      setTimeout(function(){open(false);}, reduce?0:1400);
+    }
+  }catch(e){}
+})();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script>
 document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});

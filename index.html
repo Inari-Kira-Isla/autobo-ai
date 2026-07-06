@@ -25,6 +25,7 @@
 {
   "@context": "https://schema.org",
   "@type": ["Organization","Service"],
+  "@id": "https://autobo-ai.vercel.app/#org",
   "name": "自動波 AutoBo",
   "alternateName": "AutoBo",
   "url": "https://autobo-ai.vercel.app",
@@ -222,22 +223,27 @@
     books:'對數記帳 🧾 收支自動歸類對數，對唔上嘅數會標返出嚟等你核，唔會靜默過數。',
     social:'社群排程 📅 一次過排好成星期嘅貼文，中英葡三語都得，到時自動出。'
   };
-  function open(){panel.hidden=false;launch.hidden=true;}
-  function shut(){panel.hidden=true;launch.hidden=false;}
+  function open(focusIn){panel.hidden=false;launch.hidden=true;if(focusIn){try{closeBtn.focus();}catch(e){}}}
+  function shut(){var inside=panel.contains(document.activeElement);panel.hidden=true;launch.hidden=false;if(inside){try{launch.focus();}catch(e){}}}
   function add(cls,txt){var m=document.createElement('div');m.className='cc-msg '+cls;m.textContent=txt;body.appendChild(m);body.scrollTop=body.scrollHeight;}
-  launch.addEventListener('click',open);
+  launch.addEventListener('click',function(){open(true);});
   closeBtn.addEventListener('click',shut);
+  document.addEventListener('keydown',function(e){if((e.key==='Escape'||e.key==='Esc')&&!panel.hidden){shut();}});
+  var seen={};
   chips.addEventListener('click',function(e){
     var b=e.target.closest('.cc-chip'); if(!b) return;
+    if(seen[b.dataset.topic]) return; // one answer per topic — bounds #ccBody growth
+    seen[b.dataset.topic]=1;
     add('cc-user', b.textContent);
     add('cc-bot', replies[b.dataset.topic] || '呢類悶工自動波都做得，我哋落地砌到啱用先交貨。');
     add('cc-bot','想睇你間舖啱唔啱？撳下面免費診斷 👇');
   });
   launch.hidden=false; // reveal only after JS wires up (progressive enhancement)
   try{
-    if(!sessionStorage.getItem('cc_seen')){
+    var home=/^\/(index\.html)?$/.test(location.pathname);
+    if(home && innerWidth>=768 && !sessionStorage.getItem('cc_seen')){
       sessionStorage.setItem('cc_seen','1');
-      setTimeout(open, reduce?0:1400);
+      setTimeout(function(){open(false);}, reduce?0:1400);
     }
   }catch(e){}
 })();
