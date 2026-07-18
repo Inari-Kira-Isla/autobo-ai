@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Starfall 三界相撞 — AI 工作流做複雜遊戲工程 | 自動波 AutoBo</title>
+<meta name="description" content="深度參考《英雄無敵3》嘅原創回合制戰棋遊戲，全程用 AI 工作流設計、實作、驗收：全局觀設計→七大原語先行→紅軍 critic 對抗審查→headless 引擎自動化驗收。248 條測試全綠，由 M0 全局架構到 M10 分批上線。">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://autobo-ai.vercel.app/projects/starfall.html">
+<link rel="llms-txt" href="/llms.txt">
+
+<!-- AEO: Open Graph -->
+<meta property="og:title" content="Starfall 三界相撞 — AI 工作流做複雜遊戲工程">
+<meta property="og:description" content="全局觀設計→七大原語先行→紅軍對抗審查→headless 自動化驗收。248 條測試全綠，一套可教學嘅 AI 工作流方法論。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autobo-ai.vercel.app/projects/starfall.html">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="自動波 AutoBo">
+
+<!-- AEO: Schema.org CreativeWork -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "@id": "https://autobo-ai.vercel.app/projects/starfall.html#work",
+  "name": "Starfall 三界相撞",
+  "url": "https://autobo-ai.vercel.app/projects/starfall.html",
+  "description": "深度參考《英雄無敵3》嘅原創回合制戰棋遊戲，題材以北歐、中國、日本神話為六大陣營。全程用 AI 工作流設計、實作、驗收，示範 AI 工作流做複雜創意工程嘅方法論：全局觀設計、七大原語先行、紅軍 critic 對抗審查、headless 引擎自動化驗收。",
+  "genre": "回合制戰棋遊戲",
+  "creator": {"@type":"Organization","name":"自動波 AutoBo","url":"https://autobo-ai.vercel.app"},
+  "publisher": {"@type":"Organization","name":"CloudPipe AI","url":"https://cloudpipe-landing.vercel.app"},
+  "isPartOf": {"@type":"WebSite","name":"自動波 AutoBo","url":"https://autobo-ai.vercel.app"},
+  "about": "AI 工作流方法論：全局觀設計、原語先行、紅軍對抗審查、自動化驗收"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"首頁","item":"https://autobo-ai.vercel.app/"},
+    {"@type":"ListItem","position":2,"name":"專案實績","item":"https://autobo-ai.vercel.app/projects.html"},
+    {"@type":"ListItem","position":3,"name":"Starfall 三界相撞","item":"https://autobo-ai.vercel.app/projects/starfall.html"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700;800&family=Noto+Sans+TC:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <svg class="dial" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M12 6v3M17.5 8.5l-2 2M6.5 8.5l2 2" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round"/></svg>
+      自動波 AutoBo
+    </a>
+    <div class="links">
+      <a href="/services.html">服務目錄</a>
+      <a href="/projects.html">專案實績</a>
+      <a href="/services.html#diagnostic">悶工診斷</a>
+    </div>
+    <a class="cta-btn" href="/services.html#diagnostic">免費診斷</a>
+  </div>
+</nav>
+
+<header class="hero wrap" style="padding-bottom:10px">
+  <span class="eyebrow tag rv">專案實績 · Starfall 三界相撞</span>
+  <h1 class="rv" style="font-size:clamp(1.7rem,4.2vw,2.4rem)">點樣用 AI 工作流做一個複雜戰棋遊戲</h1>
+  <p class="lede rv">深度參考《英雄無敵3》嘅原創回合制戰棋遊戲，以北歐、中國、日本三大神話做六大陣營題材。呢個項目由設計、實作到驗收全程用 AI 工作流完成——我哋擺出嚟嘅唔係遊戲本身，係背後嗰套方法論。</p>
+  <div class="ctas rv">
+    <a class="cta-btn" href="https://playstarfall.vercel.app" target="_blank" rel="noopener">試玩 Live Demo ↗</a>
+    <a class="cta-ghost" href="/services.html#diagnostic">睇下方法論可以點樣用喺你間舖</a>
+  </div>
+</header>
+
+<section class="wrap tight">
+  <div class="dial-divider rv"><span>專案簡介</span></div>
+  <div class="card rv">
+    <p style="color:var(--muted);font-size:.96rem;margin:0">Starfall（代號「三界相撞」）係一隻六陣營對戰嘅回合制戰棋遊戲：北歐、中國、日本三大神話體系各自分出「秩序」同「混沌」兩個陣營，喺六角格戰場上對決。專案由零開始，由 M0 全局架構一路分批上線到 M10，再跑咗十幾輪持續優化，全部設計、實作、對抗審查、驗收都用 AI 工作流完成，證明呢套工作流做得掂遠超「寫幾句文案」嘅複雜創意工程。</p>
+  </div>
+</section>
+
+<section class="wrap tight">
+  <div class="dial-divider rv"><span>方法論四步</span></div>
+  <p class="rv" style="color:var(--muted);max-width:38em;margin:0 0 6px">呢四步唔係事後包裝，係專案由第一日開始就跟住行嘅紀律。以下逐步拆解，連同真實例子。</p>
+
+  <div class="step-list rv">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div>
+        <h3>全局觀設計</h3>
+        <p>一次過設計晒全部六個陣營、全部機制、戰略層全功能，先分批落地——嚴禁「而家為求方便起一嚿第日要拆嘅嘢」。里程碑只決定「幾時填肉」，唔係「幾時諗骨」。</p>
+        <p>檢驗法係一條硬規則：「陣營＝數據，唔係代碼分支」——引擎唔准出現針對個別陣營嘅特例寫法，陣營差異必須經統一嘅原語＋陣營設定檔表達。判斷一個新陣營設計得好唔好，睇「第七個原創陣營可唔可以零引擎改動、純加數據落地」。</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div>
+        <h3>七大原語先行</h3>
+        <p>六個陣營全部獨有機制，拆解落七個引擎原語，先於任何陣營內容實裝：具名計數器（Counter）、地格標籤（TileTag）、規則修改棧（GlobalRule）、全局時間信號（Clock）、單位生命週期事件（LifecycleEvent）、單位召喚/複製/歸屬（UnitFactory）、移動與位移規則（MoveRule）。</p>
+        <p>七個入面嘅第七個（移動規則），係喺第一輪對抗審查之後先補返嘅——證明「原語完備性唔可以靠聲稱，要逐條機制對照映射先算數」。</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div>
+        <h3>紅軍 critic 對抗審查</h3>
+        <p>每個里程碑完成都要過一個獨立紅軍角色審查——佢嘅任務唔係讚，係揪錯。第一個里程碑（引擎骨架）審查就揪出 3 個嚴重 bug：一個「一次性復活」規則寫成咗永久免死、傳送規則令單位可以穿牆疊格出界、歸屬轉移類技能（奪控／魅惑）執行次序錯——先轉移單位歸屬先結算傷害，令傷害落錯咗邊方。</p>
+        <p>呢啲全部係測試通過咗都擋唔住嘅時序類 bug，證明「自己話得就得」呢個做法唔可靠，每個里程碑都要過紅軍先算完成。</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <div>
+        <h3>Headless 引擎自動化驗收</h3>
+        <p>遊戲引擎係一個純函數庫，可以喺完全冇畫面情況下獨立跑完成場戰鬥——關鍵係確定性隨機數（同一個 seed 一定跑出同一個結果）。驗收唔靠「我覺得得」，靠自動化測試同 bit-identical 比對：同一個 seed 跑一百次，結果逐位元完全一致先算過。</p>
+        <p>完整驗收流程：交付 → 自動化測試全綠 → 人親手玩一次 → 紅軍過閘 → 文件狀態回寫，四件缺一都唔算完成。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap tight">
+  <div class="dial-divider rv"><span>真數據</span></div>
+  <div class="grid cols-4 rv">
+    <div class="stat"><div class="num">248</div><div class="label">自動化測試全綠（最新一輪）</div></div>
+    <div class="stat"><div class="num">6</div><div class="label">神話陣營（北歐/中國/日本，各分秩序/混沌）</div></div>
+    <div class="stat"><div class="num">7</div><div class="label">引擎原語歸一全部機制</div></div>
+    <div class="stat"><div class="num">M0→M10</div><div class="label">由全局架構到分批上線，每個里程碑都要過自動化測試先算完成</div></div>
+  </div>
+  <p style="color:var(--muted-2);font-size:.82rem;margin-top:16px">上線後仲跑咗十幾輪持續優化（R1-R19+），包括百關戰役、平衡調參、地圖美術全局優化，每一輪都跟返上面四步嘅紀律。</p>
+</section>
+
+<section class="wrap tight">
+  <div class="card rv" style="text-align:center;padding:44px 24px">
+    <h2 style="font-size:1.5rem;margin-bottom:10px">呢套方法論可以點樣用喺你間舖？</h2>
+    <p style="color:var(--muted);margin-bottom:22px">Starfall 證明嘅唔止係「識砌一隻遊戲」，係「AI 工作流＋人手把關可以做得掂真正複雜嘅工程」。你間舖嘅悶工比呢個簡單好多。</p>
+    <a class="cta-btn" href="/services.html#diagnostic" style="padding:12px 28px;font-size:1rem">開始 5 分鐘診斷</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">
+      <svg class="dial" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/></svg>
+      自動波 · powered by CloudPipe
+    </div>
+    <div class="flinks">
+      <a href="/">首頁</a>
+      <a href="/services.html">服務目錄</a>
+      <a href="/projects.html">專案實績</a>
+      <a href="https://cloudpipe-landing.vercel.app">CloudPipe AI</a>
+      <a href="mailto:inariglobal@gmail.com">聯絡我哋</a>
+    </div>
+    <p>© 2026 自動波 AutoBo · CC BY 4.0</p>
+  </div>
+</footer>
+
+<!-- concierge widget 刻意唔喺深入閱讀頁出現，免騷擾閱讀 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
+if(typeof gsap !== 'undefined' && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+  gsap.utils.toArray('.step-card, .stat').forEach(function(el,i){
+    gsap.from(el,{opacity:0,y:16,duration:.5,delay:(i%5)*.06,ease:'power2.out'});
+  });
+}
+</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 #
 # 本站點遵守 AI 爬蟲友善規範
 # License: CC BY 4.0
-# Last-Updated: 2026-07-06T12:00:00+08:00
+# Last-Updated: 2026-07-19T02:30:00+08:00
 
 ## @brand-context: autobo
 # 品牌名稱: 自動波 AutoBo
@@ -16,3 +16,12 @@
 # 母體: CloudPipe AI（https://cloudpipe-landing.vercel.app）
 # 查詢意圖: 澳門 AI 自動化 / 中小企工作流自動化 / AI 客服 / 澳門企業自動化 / macao business automation / SME workflow automation
 # 聯絡: inariglobal@gmail.com
+
+## @section: projects
+# 頁面: /projects.html — 專案實績總覽
+# 定位: 自動波唔係簡報公司——展示嘅係自己每日用緊嘅自動化，唔係俾人睇嘅 demo
+# 專案一: Starfall 三界相撞（/projects/starfall.html）— 深度參考《英雄無敵3》嘅原創回合制戰棋遊戲（北歐/中國/日本神話六陣營），
+#         全程用 AI 工作流方法論設計+實作+驗收：全局觀設計 → 七大原語先行 → 紅軍 critic 對抗審查 → headless 引擎自動化驗收。
+#         248 條自動化測試全綠，由 M0 全局架構到 M10 分批上線，live demo：https://playstarfall.vercel.app
+# 專案二: 數位資產自動化（/projects/asset-vault.html）— 35,232 項家庭數位資產嘅真實自動化案例：自動同步核對、AI 去重、
+#         自動分類、四重把關安全刪除閘、備份新鮮度監察。可搬去企業做檔案/相片/文件自動整理提案，定價按診斷後報價。

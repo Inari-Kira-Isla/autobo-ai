@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>專案實績 — 自動波 AutoBo</title>
+<meta name="description" content="自動波唔係簡報公司——呢啲係我哋自己每日用緊嘅自動化。兩個真實項目：Starfall 三界相撞（AI 工作流做複雜遊戲工程嘅方法論）同數位資產自動化（35,000+ 項家庭數位資產嘅真實案例，可以搬去你公司）。">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://autobo-ai.vercel.app/projects.html">
+<link rel="llms-txt" href="/llms.txt">
+
+<!-- AEO: Open Graph -->
+<meta property="og:title" content="專案實績 — 自動波 AutoBo">
+<meta property="og:description" content="自動波唔係簡報公司——呢啲係我哋自己每日用緊嘅自動化。兩個真實項目：複雜遊戲工程方法論 + 數位資產自動化真實案例。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autobo-ai.vercel.app/projects.html">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="自動波 AutoBo">
+
+<!-- AEO: Schema.org CollectionPage + BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://autobo-ai.vercel.app/projects.html#page",
+  "name": "專案實績 — 自動波 AutoBo",
+  "url": "https://autobo-ai.vercel.app/projects.html",
+  "description": "自動波自己每日用緊嘅 AI 工作流自動化實績：複雜遊戲工程方法論、數位資產自動化提案。",
+  "isPartOf": {"@type":"WebSite","name":"自動波 AutoBo","url":"https://autobo-ai.vercel.app"},
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"item":{"@type":"CreativeWork","name":"Starfall 三界相撞","url":"https://autobo-ai.vercel.app/projects/starfall.html","description":"深度參考《英雄無敵3》嘅原創回合制戰棋遊戲，全程用 AI 工作流設計、實作、驗收。"}},
+      {"@type":"ListItem","position":2,"item":{"@type":"CreativeWork","name":"數位資產自動化","url":"https://autobo-ai.vercel.app/projects/asset-vault.html","description":"35,000+ 項家庭數位資產嘅自動整理系統，可搬去企業嘅檔案/相片/文件自動化提案。"}}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"首頁","item":"https://autobo-ai.vercel.app/"},
+    {"@type":"ListItem","position":2,"name":"專案實績","item":"https://autobo-ai.vercel.app/projects.html"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700;800&family=Noto+Sans+TC:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <svg class="dial" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M12 6v3M17.5 8.5l-2 2M6.5 8.5l2 2" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round"/></svg>
+      自動波 AutoBo
+    </a>
+    <div class="links">
+      <a href="/">首頁</a>
+      <a href="/services.html">服務目錄</a>
+      <a href="/services.html#diagnostic">悶工診斷</a>
+    </div>
+    <a class="cta-btn" href="/services.html#diagnostic">免費診斷</a>
+  </div>
+</nav>
+
+<header class="hero wrap" style="padding-bottom:10px">
+  <span class="eyebrow tag rv">專案實績</span>
+  <h1 class="rv" style="font-size:clamp(1.7rem,4.2vw,2.4rem)">自動波唔係簡報公司</h1>
+  <p class="lede rv">呢啲係我哋自己每日用緊嘅自動化——唔係做嚟俾人睇嘅 demo。一個證明 AI 工作流做得掂複雜創意工程，一個係我哋自己屋企數位資產管理嘅真實案例。做得到自己嘅嘢，先夠膽同你講可以點樣搬去你間舖。</p>
+</header>
+
+<section class="wrap tight">
+  <div class="proj-grid rv">
+
+    <div class="proj-card">
+      <span class="ptag">AI 工作流方法論 · 遊戲開發</span>
+      <h3>Starfall 三界相撞</h3>
+      <p class="pchallenge">AI 工作流可唔可以獨力做得掂一個要平衡六個陣營、七大機制原語嘅複雜戰棋遊戲？</p>
+      <ul class="papproach">
+        <li>全局觀設計：一次過設計晒六大陣營同全部機制，先分批落地，唔逐點縫補</li>
+        <li>七大原語先行：全部陣營機制歸一做七個引擎原語，陣營變純數據，唔係代碼分支</li>
+        <li>紅軍 critic 對抗審查 + headless 引擎自動化驗收：唔信自報，跑到 bit-identical 先算過</li>
+      </ul>
+      <p class="presult">248 條自動化測試全綠 · 6 大神話陣營 · 由 M0 全局架構分批上線到 M10</p>
+      <a class="cta-ghost plink" href="/projects/starfall.html">睇方法論深入頁 →</a>
+    </div>
+
+    <div class="proj-card">
+      <span class="ptag">數位資產自動化 · 企業提案</span>
+      <h3>數位資產自動化</h3>
+      <p class="pchallenge">一個家庭嘅相片同短片有幾多？我哋自己嘅答案係 35,000+ 項——你間公司嘅檔案、單據、相片，可能仲亂。</p>
+      <ul class="papproach">
+        <li>自動同步 + 雙重核對：新素材一入庫即刻同步核對，一項都唔少</li>
+        <li>AI 去重 + 自動分類：重複素材、地點、事件自動歸類，唔使人手篩</li>
+        <li>四重把關安全刪除閘：任何刪除操作要過四重核對，先到人手最終拍板</li>
+      </ul>
+      <p class="presult">35,232 項資產 100% 雙重核對 · 1,713 項重複素材自動識別 · 9,818 張截圖變可搜尋內容</p>
+      <a class="cta-ghost plink" href="/projects/asset-vault.html">睇「搬去你公司」提案 →</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="wrap tight">
+  <div class="card rv" style="text-align:center;padding:44px 24px">
+    <h2 style="font-size:1.5rem;margin-bottom:10px">想睇下呢套做法可以點樣用喺你間舖？</h2>
+    <p style="color:var(--muted);margin-bottom:22px">5 分鐘診斷清單，唔使識技術，我哋揀最有把握嗰項免費幫你評估。</p>
+    <a class="cta-btn" href="/services.html#diagnostic" style="padding:12px 28px;font-size:1rem">開始診斷</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">
+      <svg class="dial" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/></svg>
+      自動波 · powered by CloudPipe
+    </div>
+    <div class="flinks">
+      <a href="/">首頁</a>
+      <a href="/services.html">服務目錄</a>
+      <a href="https://cloudpipe-landing.vercel.app">CloudPipe AI</a>
+      <a href="mailto:inariglobal@gmail.com">聯絡我哋</a>
+    </div>
+    <p>© 2026 自動波 AutoBo · CC BY 4.0</p>
+  </div>
+</footer>
+
+<!-- concierge chat widget (Messenger-style; identical bundle to index.html; auto-open self-gates to home+desktop, so this inner page shows launcher-only) -->
+<button class="cc-launch" id="ccLaunch" aria-label="同自動波傾偈" hidden>
+  <span class="cc-dot"></span>
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M12 6v3M17.5 8.5l-2 2M6.5 8.5l2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+</button>
+<aside class="cc-panel" id="ccPanel" role="dialog" aria-label="自動波 concierge" hidden>
+  <div class="cc-head">
+    <span class="cc-ava"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M12 6v3M17.5 8.5l-2 2M6.5 8.5l2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+    <div class="cc-id">
+      <div class="cc-name">自動波</div>
+      <div class="cc-status">通常幾分鐘內回覆</div>
+    </div>
+    <button class="cc-x" id="ccClose" aria-label="收埋">✕</button>
+  </div>
+  <div class="cc-body" id="ccBody">
+    <div class="cc-msg cc-bot">Hi，我係自動波 👋 想擺脫邊樣悶工？揀一個，我話你知點自動走。</div>
+  </div>
+  <div class="cc-chips" id="ccChips">
+    <button class="cc-chip" type="button" data-topic="enquiry">客戶查詢自動覆</button>
+    <button class="cc-chip" type="button" data-topic="quote">報價單生成</button>
+    <button class="cc-chip" type="button" data-topic="books">對數記帳</button>
+    <button class="cc-chip" type="button" data-topic="social">社群排程</button>
+  </div>
+  <div class="cc-foot">
+    <a class="cta-btn" href="/services.html#diagnostic">5 分鐘悶工診斷</a>
+  </div>
+</aside>
+<script>
+(function(){
+  var launch=document.getElementById('ccLaunch'),
+      panel=document.getElementById('ccPanel'),
+      closeBtn=document.getElementById('ccClose'),
+      body=document.getElementById('ccBody'),
+      chips=document.getElementById('ccChips');
+  if(!launch||!panel||!body||!chips) return;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var replies={
+    enquiry:'客戶查詢自動覆 👍 常見問題 AI 即刻答；超出範圍或者唔肯定嘅，會即刻轉返俾你人手——唔會靠估亂噏。',
+    quote:'報價單生成 ✅ 客戶講完需求，AI 幫你草擬報價單，你過目改一改就發得——慳返打字同計數。',
+    books:'對數記帳 🧾 收支自動歸類對數，對唔上嘅數會標返出嚟等你核，唔會靜默過數。',
+    social:'社群排程 📅 一次過排好成星期嘅貼文，中英葡三語都得，到時自動出。'
+  };
+  function open(focusIn){panel.hidden=false;launch.hidden=true;if(focusIn){try{closeBtn.focus();}catch(e){}}}
+  function shut(){var inside=panel.contains(document.activeElement);panel.hidden=true;launch.hidden=false;if(inside){try{launch.focus();}catch(e){}}}
+  function add(cls,txt){var m=document.createElement('div');m.className='cc-msg '+cls;m.textContent=txt;body.appendChild(m);body.scrollTop=body.scrollHeight;}
+  launch.addEventListener('click',function(){open(true);});
+  closeBtn.addEventListener('click',shut);
+  document.addEventListener('keydown',function(e){if((e.key==='Escape'||e.key==='Esc')&&!panel.hidden){shut();}});
+  var seen={};
+  chips.addEventListener('click',function(e){
+    var b=e.target.closest('.cc-chip'); if(!b) return;
+    if(seen[b.dataset.topic]) return; // one answer per topic — bounds #ccBody growth
+    seen[b.dataset.topic]=1;
+    add('cc-user', b.textContent);
+    add('cc-bot', replies[b.dataset.topic] || '呢類悶工自動波都做得，我哋落地砌到啱用先交貨。');
+    add('cc-bot','想睇你間舖啱唔啱？撳下面免費診斷 👇');
+  });
+  launch.hidden=false; // reveal only after JS wires up (progressive enhancement)
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
+if(typeof gsap !== 'undefined' && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+  gsap.utils.toArray('.proj-card').forEach(function(el,i){
+    gsap.from(el,{opacity:0,y:16,duration:.5,delay:(i%4)*.08,ease:'power2.out'});
+  });
+}
+</script>
+</body>
+</html>

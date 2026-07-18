@@ -6,7 +6,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <title>服務目錄 + 悶工診斷 — 自動波 AutoBo</title>
 <meta name="description" content="自動波 8 大工作流模板：客戶查詢自動覆、報價單生成、社群排程、對數記帳、會議摘要、中英葡翻譯、客戶跟進、月度報告。填 5 分鐘悶工診斷，我哋免費幫你評估邊樣啱做。">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://autobo-ai.vercel.app/services.html">
 <link rel="llms-txt" href="/llms.txt">
 
@@ -105,6 +105,7 @@
     </a>
     <div class="links">
       <a href="/">首頁</a>
+      <a href="/projects.html">專案實績</a>
       <a href="#diagnostic">悶工診斷</a>
     </div>
     <a class="cta-btn" href="#diagnostic">免費診斷</a>
@@ -235,6 +236,7 @@
     </div>
     <div class="flinks">
       <a href="/">首頁</a>
+      <a href="/projects.html">專案實績</a>
       <a href="https://cloudpipe-landing.vercel.app">CloudPipe AI</a>
       <a href="mailto:inariglobal@gmail.com">聯絡我哋</a>
     </div>
@@ -318,7 +320,7 @@ if(typeof gsap !== 'undefined' && !matchMedia('(prefers-reduced-motion: reduce)'
   });
 }
 
-/* TODO(Kira): 換返 Tally embed（開咗戶口之後）。而家用 mailto 保證零虛構第三方整合、即刻可用。 */
+/* TODO: 換返 Tally embed（開咗戶口之後）。而家用 mailto 保證零虛構第三方整合、即刻可用。 */
 document.getElementById('diagForm').addEventListener('submit', function(e){
   e.preventDefault();
   var company = document.getElementById('company').value || '（未填）';
